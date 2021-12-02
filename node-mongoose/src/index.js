@@ -11,7 +11,7 @@ const port = 3000
 app.use(bodyParser.urlencoded({ extended: false }))
 app.set('json spaces', 2);
 
-//userRoute(app)
+userRoute(app)
 postRoute(app)
 
 app.get('/', (req, res) => res.send('Olá mundo pelo Express!'))

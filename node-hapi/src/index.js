@@ -2,6 +2,7 @@ import Hapi from 'hapi'
 
 import database from './config/database'
 import userRoute from './routes/userRoute'
+import postsRoute from './routes/postsRoute'
 
 const port = 3000
 const server = Hapi.server({
@@ -15,6 +16,7 @@ const server = Hapi.server({
 })
 
 userRoute(server)
+postsRoute(server)
 
 server.route({
     method: 'GET',
